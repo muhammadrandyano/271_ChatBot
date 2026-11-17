@@ -6,7 +6,7 @@ let messages = [];
 
 function addMessage(role, text) {
     const msgDiv = document.createElement('div');
-    msgDiv.classList.add('message', ${role}-message);
+    msgDiv.classList.add('message', `${role}-message`);
     
     const avatar = document.createElement('div');
     avatar.classList.add('avatar');
