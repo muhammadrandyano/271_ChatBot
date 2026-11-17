@@ -75,5 +75,16 @@ async function sendMessage() {
                 }
             }
         }
+        
+        messages.push({ role: 'assistant', content: botText });
+        botContent.textContent = botText; // Final text
+
+    } catch (error) {
+        console.error(error);
+        botContent.textContent = "Maaf, terjadi kesalahan saat menghubungi server.";
+        botContent.style.color = "red";
+    } finally {
+        sendBtn.disabled = false;
+        userInput.focus();
     }
 }
