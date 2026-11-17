@@ -88,3 +88,8 @@ async function sendMessage() {
         userInput.focus();
     }
 }
+
+sendBtn.addEventListener('click', sendMessage);
+userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+});
