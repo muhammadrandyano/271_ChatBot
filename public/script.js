@@ -24,3 +24,18 @@ function addMessage(role, text) {
     chatWindow.scrollTop = chatWindow.scrollHeight;
     return content;
 }
+
+async function sendMessage() {
+    const text = userInput.value.trim();
+    if (!text) return;
+
+    // Tampilkan pesan user
+    addMessage('user', text);
+    messages.push({ role: 'user', content: text });
+    
+    userInput.value = '';
+    sendBtn.disabled = true;
+
+    // Placeholder untuk pesan bot
+    const botContent = addMessage('bot', '...');
+}
