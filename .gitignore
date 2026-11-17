@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment Variables (PENTING! Jangan sampai ke-push)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
